@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updation</title>
+</head>
+<body>
+    <a href="/index">Home Page</a>
+    <p>userid = {{context[0]["id"]}}</p>
+    <p>Name = {{ context[0]["name"] }}</p>
+    <p>Mobile number = {{ context[0]["MobileNo"] }}</p>
+    <p>City = {{ context[0]["city"] }}</p>
+    <p>Profession = {{ context[0]["profession"] }}</p>
+    <p>{{contact}} contact id</p>
+    <br><br>
+    <h2>Enter the updated values</h2>
+    <form action="/updated"  method="POST">
+        <label>Name</label>
+        <input type="text" name="name" align = "center" value = {{uname}}><br>
+        <label>MobileNo</label>
+        <input type="number" name="MobileNo" align = "center" value = {{umobileNo}}><br>
+        <label>City</label>
+        <input type="text" name="city" value = {{ucity}}><br>
+        <label>Profession</label>
+        <input type="text" name="profession" value = {{profession}}><br>
+        <input type="submit" name="submit" value = "submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Contact</title>
+</head>
+<body>
+    <a href="/index"><h2>Home Page</h2></a>
+    <table border="1"">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>MobileNumber</th>
+            <th>City</th>
+            <th>Profession</th>
+        </tr>
+        {%for i in context %}
+            <tr>
+                <td>{{i["id"]}}</td>
+                <td>{{i["name"]}}</td>
+                <td>{{i["MobileNo"]}}</td>
+                <td>{{i["city"]}}</td>
+                <td>{{i["profession"]}}</td>
+            </tr>
+        {% endfor %}
+        
+    </table>
+    <br><br><br>
+    <form action="/deleteComp" method="POST">
+        <label>Enter the id</label>
+        <input type="number" name="userid">
+        <input type="submit" name="submit" value="Submit">
+    </form>
+</body>
+</html>
